@@ -4,7 +4,7 @@ const cors = require("cors")
 
 const app = express()
 const resumeRoute = require("./controller/resumeRoute")
-const addRoute = require("./controller/addRoute")
+
 
 //middleware
 app.use(express.json())
@@ -15,7 +15,7 @@ mongoose.connect("mongodb+srv://Lakshmi:ZEPH26YR@cluster0.gs9xdes.mongodb.net/re
 
 //routing
 app.use("/api/resume",resumeRoute)
-app.use("api/upload",addRoute)
+
 
 app.listen(3004,()=>{
     console.log("Server Running")
